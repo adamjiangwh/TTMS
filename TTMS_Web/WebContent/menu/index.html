@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>这就是命影院票务管理系统</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script type="text/javascript">
+function pr(_id)
+{
+    var select_id = parseInt(_id.replace("xx",""));
+    for (i=1;i<=8;i++)
+    {
+    if (i==select_id)
+    {
+    document.getElementById("xx"+i).className = "x_css";
+    }
+    else
+    {
+    document.getElementById("xx"+i).className = "y_css";
+    }
+    }
+    }
+    </script>
+<script language="javascript" type="text/javascript">
+function show(num){
+ document.getElementById(num).style.display="block";
+}
+function hidden1(num){
+ document.getElementById(num).style.display="none";
+}
+    </script>
+<script language="javascript" type="text/javascript">
+function r(num){
+ document.getElementById(num).style.display="block";
+}
+function r_1(num){
+ document.getElementById(num).style.display="none";
+}
+    </script>
+<script language="javascript" type="text/javascript">
+    
+    function changeIcon(id)
+    {
+    if(id=="HR")
+    {
+    document.getElementById("dTitle").innerHTML="";
+        document.getElementById("dTitle").style.display="block";
+    }
+    else if(id=="Notice")
+    {
+    document.getElementById("dTitle").style.display="none";
+    }
+    else if(id=="KnowLedge")
+    {
+     document.getElementById("dTitle").innerHTML="";
+        document.getElementById("dTitle").style.display="block";
+    }
+    else if(id=="Task")
+    {
+    document.getElementById("dTitle").style.display="none";
+    }
+     else if(id=="Order")
+    {
+      document.getElementById("dTitle").innerHTML="";
+    document.getElementById("dTitle").style.display="block";
+    }
+    else if(id=="Item")
+    {
+    document.getElementById("dTitle").style.display="none";
+    }
+     else if(id=="System")
+    {
+    document.getElementById("dTitle").style.display="none";
+    }
+     else if(id=="Product")
+    {
+    document.getElementById("dTitle").style.display="none";
+    }
+    }
+    </script>
+<link rel="stylesheet" type="text/css" href="css/index.css">
+</head>
+<body>
+<div style="width: 1430px; height: 100%;">
+<div class="mian_r" onmousemove="r(22)" onmouseout="r_1(22)">
+<div class="mian_r_bj png" style="display: none;" id="22" onmousemove="r(22)" onmouseout="r_1(22)">
+<div>
+<a href="#">
+<img src="images\r_icon_03.png"></a> <a href="#">
+<img src="images\r_icon_06.png"></a> <a href="#">
+<img src="images\r_icon_08.png"></a> <a href="#">
+<img src="images\r_icon_10.png"></a>
+</div>
+</div>
+</div>
+<table height="100%" width="1425" border="0" cellpadding="0" cellspacing="0" style="overflow: hidden;">
+<tr>
+<td colspan="2" height="52">
+<div>
+<div id="header">
+<div class="header01">
+<p class="logo">
+<a href="index.html">
+<span style="font-family:华文行楷;　color:black; font-size:25px; font-weight:bold;">这就是命影院票务管理系统</span></a></p>
+<p class="right_01" style="position: absolute; z-index: 9; width: e-xpression(this.nextSibling.offsetWidth);
+                                    height: e-xpression(this.nextSibling.offsetHeight); top: e-xpression(this.nextSibling.offsetTop);
+                                    left: e-xpression(this.nextSibling.offsetLeft);" frameborder="0">
+<img src="images/pic_06.gif" alt="">
+</p>
+<p class="right_02">
+您好，<span>匿名</span>，欢迎登录！</p>
+</div>
+</div>
+</div>
+</td>
+</tr>
+
+<tr>
+<td width="190" valign="top" style="background: url(images/lift_bj_02.gif) repeat-y;" background="images/lift_bj_02.gif ">
+<div class="side" style="position: absolute;">
+<ul id="nav">
+
+<li class="y_css" id="xx1" onmouseover="show(1)" onmouseout="hidden1(1)">
+<a href="rsxz/Employlee.html" onclick="changeIcon('HR')" target="mainFrame" onmousedown="javascript:pr('xx1')"><span></span>
+<p class="icon_01">
+用户管理</p>
+</a></li>
+
+<li class="y_css" id="xx2">
+<a href="knowledge/KnowLedgeClass.html" target="mainFrame" onclick="changeIcon('KnowLedge')" onmousedown="javascript:pr('xx2')" onmouseover="show(2)" onmouseout="hidden1(2)">
+<span></span>
+<p class="icon_11">
+影厅管理</p>
+</a></li>
+
+<li class="y_css" id="xx3">
+<a href="test.html" target="mainFrame" onclick="changeIcon('System')" onmousedown="javascript:pr('xx3')" onmouseover="show(3)" onmouseout="hidden1(3)">
+<span></span>
+<p class="icon_03">
+影票管理</p>
+</a></li>
+
+<li class="y_css" id="xx4">
+<a href="test.html" onclick="changeIcon('System')" target="mainFrame" onmousedown="javascript:pr('xx4')" onmouseover="show(4)" onmouseout="hidden1(4)"><span></span>
+<p class="icon_06">
+影片管理</p>
+</a></li>
+
+<li class="y_css" id="xx5">
+<a href="task/Schedule.html" onclick="changeIcon('Task')" target="mainFrame" onmousedown="javascript:pr('xx5')" onmouseover="show(5)" onmouseout="hidden1(5)"><span></span>
+<p class="icon_12">
+座位管理</p>
+</a></li>
+
+<li class="y_css" id="xx6">
+<a href="test.html" onclick="changeIcon('System')" target="mainFrame" onmousedown="javascript:pr('xx6')" onmouseover="show(6)" onmouseout="hidden1(6)"><span></span>
+<p class="icon_02">
+演出计划</p>
+</a></li>
+
+<li class="y_css" id="xx7">
+<a href="test.html" onclick="changeIcon('System')" target="mainFrame" onmousedown="javascript:pr('xx7')" onmouseover="show(7)" onmouseout="hidden1(7)"><span></span>
+<p class="icon_07">
+销售管理</p>
+</a></li>
+
+<li class="y_css" id="xx8">
+<a href="notice/NoticeClass.html" onclick="changeIcon('Notice')" target="mainFrame" onmousedown="javascript:pr('xx8')" onmouseover="show(8)" onmouseout="hidden1(8)"><span></span>
+<p class="icon_10">
+系统公告</p>
+</a></li>
+</ul>
+</div>
+
+<div class="side_02">
+<ul>
+<li class="y_css" id="xx10"><a href="../zhanshi_web/index.htm" target="_blank">
+<p class="icon_8">
+产品展示</p>
+</a></li>
+</ul>
+</div>
+</td>
+<td width="1215" valign="top">
+<div id="dTitle" style="float:left; margin-left:30px;">
+<img src='images/shouye.jpg' alt='' style='margin-top:5px'>
+</div>
+<div style="text-align: right; margin-right: 15px; float: right">
+    
+<img src="images/middil_05.gif" alt=""><a href="../login/index.html"><img alt="" src="images/middil_06.gif"></a></div>
+<iframe frameborder="0" style="margin-top: 15px; height: 631px;" width="1215" id="mainFrame" name="mainFrame" src="index1.html"></iframe>
+  </td>
+<td width="5" valign="top" style="position: relative;" height="93%">
+</td>
+</tr>
+</table>
+</div>
+</body>
+</html>

@@ -1,0 +1,209 @@
+<!DOCTYPE>
+<html>
+<head>
+<title>座位管理</title>
+<link rel="stylesheet" type="text/css" href="../css/index.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<script type="application/x-javascript"> 
+    addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false);
+    function hideURLbar(){ window.scrollTo(0,1); } 
+ </script>
+
+ <script type="text/javascript">
+ 	function check(){
+ 		alert("修改座位成功！");
+ 	}
+ </script>
+ 
+<style type="text/css">
+.seats{
+  width: 100%;
+/*  padding:28px 0px 5px 0px;*/
+  margin-top: 80px;
+  overflow: hidden;
+}
+#kexuan{
+  height: 20px;
+  width: 20px;
+  border:1px solid #AAA;
+  border-radius: 20px;
+  float: left;
+  background-color: #fff;
+}
+#huai{
+  height: 20px;
+  width: 20px;
+  border:1px solid #AAA;
+  border-radius: 20px;
+  float: left;
+  background-color: red;
+}
+.pingmu{
+  position: relative;
+  width: 750px;
+  height: 50px;
+  background-color: #AAAAAA;
+  border-radius: 0 0 50px 50px;
+  text-align: center;
+  overflow: hidden;
+  margin-left:120px;
+}
+.pingmu label{
+  font-size: 20px;
+  color: #fff;
+}
+#seat{
+  width: 630px;
+  margin-left: 160px;
+}
+.seets{
+  height: 20px;
+  width: 20px;
+  border:1px solid #AAA;
+  border-radius: 20px;
+  float: left;
+  margin-left: 20px;
+  margin-top: 20px;
+}
+.seets:hover{
+  border:1px solid black;
+}
+.yuan{
+  float: left;
+  margin-left: 180px;
+  margin-right: -40px;
+  margin-bottom: 50px;
+}
+.body_seat{
+  margin-top: 50px;
+  margin-left: 150px;
+}
+.seatt{
+  width: 90px;
+  height: 20px;
+  text-align: center;
+  float: left;
+  background-color: #FF4747;
+  margin-left: 20px;
+  margin-top: 10px;
+}
+
+#choice{
+  width: 250px;
+  height: 100px;
+}
+#sbutton{
+	background: #f3f3f3;
+	width: 90px;
+	height: 35px;
+	border-radius: 5px;
+	margin-left: 10px;
+	margin-top: 10px;
+
+}
+
+.seat_numbers{
+  width: 250px;
+  height: 300px;
+  overflow: hidden;
+  background-color: #f2f2f2;
+  border-bottom: 2px solid #fff;
+}
+.seat_numbers label{
+  font-size: 20px;
+  font-family: "微软雅黑";
+  color: #AAA;
+}
+
+</style>
+</head>
+<body class="mian_bj">
+<div class="mian_top_01">
+<div class="mian_top_r"></div>
+<div class="mian_top_l"></div>
+<div class="mian_b">
+<div class="mian_b1">
+&nbsp;
+&nbsp;
+<select>
+	<option value="1">1号影厅</option>
+	<option value="2">2号影厅</option>
+	<option value="3">3号影厅</option>
+	<option value="4">4号影厅</option>
+	<option value="5">5号影厅</option>
+	<option value="6">6号影厅</option>
+	<option value="7">7号影厅</option>
+	<option value="8">8号影厅</option>
+	<option value="9">9号影厅</option>
+	<option value="10">10号影厅</option>
+</select>
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+<button type="button" id="sbutton" onclick="check();">确认</button>
+
+
+<div class="container">
+	<div class="container_wrap">
+		<div class="header_top">
+			<div class="seats">
+	  			<div class="pingmu"><label>影厅荧幕</label></div>
+	  			<div id="seat"></div>
+  			</div>
+	  		<div class="body_seat">
+		  		<div class="yuan">
+		  			 <div id="huai"></div><label>不能使用的座位</label>
+		  		</div>
+          <div class="yuan">
+             <div id="kexuan"></div><label>正常座位</label>
+          </div>
+			</div>
+		</div>
+	</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<script type="text/javascript" src="jquery-2.2.2.min.js"></script>
+  <script type="text/javascript">
+  	var set = $("#seat");
+  	var k = 0;
+  	for(var i=0;i<12;i++)
+  	{
+  		for(var j = 0; j< 15;j++)
+  		{
+  			(function(i,j){
+  				var seet = $("<div></div>");
+  				seet.click(function(){
+  					var str = "第"+(i+1)+"排第"+(j+1)+"列";
+  					if(seet.css("background-color") === "rgb(255, 0, 0)")
+  					{
+  						seet.css("background-color","#fff");
+  						k--;
+  						var st = "#"+str;
+  						$(st).remove();
+
+  					}
+  					else
+  					{
+  						seet.css("background-color","#FF0000");
+  						k++;
+  						var s = $("<div id='"+str+"'>"+str+"</div>");
+  						s.addClass("seatt");
+  						$("#choice").append(s);
+  					}
+  					var suns = 58 * k;
+  					$(".Price").html("共计:"+suns+"元");
+  				});
+  				seet.addClass("seets");
+  				set.append(seet);
+  			})(i,j);
+  		}
+  	}
+  </script>
+</body>
+</html>

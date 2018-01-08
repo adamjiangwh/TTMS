@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" 
+xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd" id="WebApp_ID" version="3.0">
+	
+	<welcome-file-list>
+		<welcome-file>index.jsp</welcome-file>
+		<welcome-file>index.html</welcome-file>
+		<welcome-file>index.htm</welcome-file>
+	</welcome-file-list>
+
+	<error-page>
+		<error-code>500</error-code>
+		<location>/error.jsp</location>
+	</error-page>
+	<error-page>
+		<error-code>404</error-code>
+		<location>/error.jsp</location>
+	</error-page>
+	<error-page>
+		<exception-type>java.lang.Exception</exception-type>
+		<location>/error.jsp</location>
+	</error-page>
+	
+	<!-- people.jsp的Servlet -->
+	<servlet>
+		<servlet-name>People</servlet-name>
+		<servlet-class>com.zjsm.servlet.People</servlet-class>
+		<load-on-startup>1</load-on-startup> 
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>People</servlet-name>
+		<url-pattern>/People</url-pattern>
+	</servlet-mapping>
+	
+		<!-- Image的Servlet -->
+	<servlet>
+		<servlet-name>Image</servlet-name>
+		<servlet-class>com.zjsm.servlet.Image</servlet-class>
+		<load-on-startup>1</load-on-startup> 
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>Image</servlet-name>
+		<url-pattern>/Image</url-pattern>
+	</servlet-mapping>
+	
+			<!-- Order的Servlet -->
+	<servlet>
+		<servlet-name>Order</servlet-name>
+		<servlet-class>com.zjsm.servlet.Order</servlet-class>
+		<load-on-startup>1</load-on-startup> 
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>Order</servlet-name>
+		<url-pattern>/Order</url-pattern>
+	</servlet-mapping>
+	
+		<!-- Movie的Servlet -->
+	<servlet>
+		<servlet-name>Movie</servlet-name>
+		<servlet-class>com.zjsm.servlet.Movie</servlet-class>
+		<load-on-startup>1</load-on-startup> 
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>Movie</servlet-name>
+		<url-pattern>/Movie</url-pattern>
+	</servlet-mapping>
+	
+			<!-- Theatre的Servlet -->
+	<servlet>
+		<servlet-name>Theatre</servlet-name>
+		<servlet-class>com.zjsm.servlet.Theatre</servlet-class>
+		<load-on-startup>1</load-on-startup> 
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>Theatre</servlet-name>
+		<url-pattern>/Theatre</url-pattern>
+	</servlet-mapping>
+	
+				<!-- Place的Servlet -->
+	<servlet>
+		<servlet-name>Place</servlet-name>
+		<servlet-class>com.zjsm.servlet.Place</servlet-class>
+		<load-on-startup>1</load-on-startup> 
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>Place</servlet-name>
+		<url-pattern>/Place</url-pattern>
+	</servlet-mapping>
+	
+					<!-- Plan的Servlet -->
+	<servlet>
+		<servlet-name>Plan</servlet-name>
+		<servlet-class>com.zjsm.servlet.Plan</servlet-class>
+		<load-on-startup>1</load-on-startup> 
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>Plan</servlet-name>
+		<url-pattern>/Plan</url-pattern>
+	</servlet-mapping>
+	
+	<!-- login.jsp的Servlet -->
+<!--	
+	<servlet>
+        <servlet-name>Login</servlet-name>
+        <servlet-class>com.zjsm.servlet.Login</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Login</servlet-name>
+        <url-pattern>*.do</url-pattern>
+    </servlet-mapping>
+-->    
+    <!-- register.jsp的Servlet -->
+<!-- 
+    	<servlet>
+        <servlet-name>Register</servlet-name>
+        <servlet-class>com.zjsm.servlet.Register</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Register</servlet-name>
+        <url-pattern>*.do1</url-pattern>
+    </servlet-mapping>
+-->   
+    <!-- 开机启动Servlet -->
+    <servlet>
+        <servlet-name>StartServlet</servlet-name>
+        <servlet-class>com.zjsm.servlet.StartServlet</servlet-class>
+        <load-on-startup>1</load-on-startup>
+    </servlet>
+    
+    <!-- 带初始化参数Servlet -->
+    <servlet>
+        <servlet-name>GetParamServlet</servlet-name>
+        <servlet-class>com.zjsm.servlet.GetParamServlet</servlet-class>
+        <init-param>
+            <param-name>dbname</param-name>
+            <param-value>MySQL</param-value>
+        </init-param>
+        <init-param>
+            <param-name>dbversion</param-name>
+            <param-value>8.0</param-value>
+        </init-param>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>GetParamServlet</servlet-name>
+        <url-pattern>/GetParamServlet</url-pattern>
+    </servlet-mapping>
+</web-app>

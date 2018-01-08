@@ -1,0 +1,107 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<title>添加影厅</title>
+<link rel="stylesheet" type="text/css" href="../css/index.css">
+
+
+</head>
+<body class="mian_bj">
+<div class="mian_top_01">
+<div class="mian_top_r"></div>
+<div class="mian_top_l"></div>
+<div class="mian_top_c">
+<ul>
+<li><a href="KnowLedgeClass.html">
+<p>
+影厅一览</p>
+</a></li>
+<li><a href="ruanzhuangxiangmuList.html">
+<p>
+添加影厅</p>
+</a></li>
+<li><a href="xiangmuguanliList.html">
+<p>
+删除影厅</p>
+</a></li>
+</ul>
+</div>
+<div class="mian_b">
+<table width="100%" border="0" cellpadding="0" cellspacing="0" class="mian_b_bg_xz">
+<tr>
+<td width="5%" class="mian_b_bg_lm">&nbsp;</td>
+<td colspan="3" class="mian_b_bg_lm">添加影厅</td>
+</tr>
+<tr>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td width="10%" valign="top">影厅名称：</td>
+<td width="55%">
+<input type="text" class="input_01" name="textfield1" id="text1"> </td>
+<td width="35%">&nbsp;</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td valign="top">影厅大小：</td>
+<td>
+<input type="text" class="input_01" name="textfield2" id="text2">-<input type="text" class="input_01" name="textfield3" id="text3"></td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>
+<div align="center"><img src="..\images\bnt_03.gif" style="margin-right:10px;" width="80" height="22" onclick="checkperform();"></a><img src="..\images\bnt_05.gif" alt="" width="80" height="22" onclick="javascript:window.history.go(-1);"></div></td>
+</tr>	
+</table>
+</div>
+</div>
+</body>
+<script language="javascript" type="text/javascript">
+function checkperform(){
+	var name = document.getElementById("text1").value;
+	var wide = document.getElementById("text2").value;
+	var length = document.getElementById("text3").value;
+	var regex = /^[\u4e00-\u9fa5]{1,4}$/;
+	var regex1 = /^[0-9]{1,3}$/;
+	var regex2 = /^[0-9]{1,3}$/;
+
+ 	if(!name.match(regex)){
+		alert("影厅名长度或格式不正确!");
+		document.textfield1.value=" ";
+		document.textfield1.focus();
+		return false;
+	}
+	if(!wide.match(regex1)){
+		alert("影厅宽度格式不正确!");
+		document.textfield2.value=" ";
+		document.textfield2.focus();
+		return false;	
+	}
+	if(!length.match(regex2)){
+		alert("影厅长度格式不正确!");
+		document.textfield3.value=" ";
+		document.textfield3.focus();
+		return false;	
+	}
+	 alert("添加成功!");
+	window.location.href='KnowLedgeClass.html';
+}
+</script> 
+</html>
+
